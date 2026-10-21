@@ -1,7 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120">
   <script type="text/ecmascript"><![CDATA[
-    alert('Hello!');
+    fetch('/api/briefing')
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('HTTP ' + response.status);
+        }
+        return response.text();
+      })
+      .then(function (result) {
+        alert(result);
+      })
+      .catch(function (error) {
+        alert('요청 실패: ' + error.message);
+      });
   ]]></script>
   <rect width="320" height="120" rx="12" fill="#f3f4f6"/>
-  <text x="160" y="68" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#111827">SVG script demo</text>
+  <text x="160" y="68" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#111827">Briefing API</text>
 </svg>
