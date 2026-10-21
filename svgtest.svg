@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" onload="alert('Hello!')">
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120">
+  <script type="text/ecmascript"><![CDATA[
+    alert('Hello!');
+  ]]></script>
   <rect width="320" height="120" rx="12" fill="#f3f4f6"/>
-  <text x="160" y="68" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#111827">SVG alert demo</text>
+  <text x="160" y="68" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#111827">SVG script demo</text>
 </svg>
